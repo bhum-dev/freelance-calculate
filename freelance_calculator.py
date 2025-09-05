@@ -46,12 +46,13 @@ def calculate_freelance_rate(monthly_salary, working_days=22, hours_per_day=8):
         }
     }
 
+monthly_salary = 39000
 # คำนวณสำหรับเงินเดือน 39,000 บาท
-rates = calculate_freelance_rate(39000)
+rates = calculate_freelance_rate(monthly_salary)
 
 
 print(f"""
-อัตราค่าจ้างต่อวันที่แนะนำสำหรับ Fullstack Developer:
+อัตราค่าจ้างต่อวันที่แนะนำสำหรับ Fullstack Developer สำหรับเงินเดือน {monthly_salary:,} บาท:
 - อัตราพื้นฐาน: {rates['daily']['base']:,} บาท/วัน
 - อัตราขั้นต่ำ: {rates['daily']['minimum']:,} บาท/วัน
 - อัตราที่แนะนำ: {rates['daily']['recommended']:,} บาท/วัน
@@ -59,7 +60,7 @@ print(f"""
 """)
 
 print(f"""
-อัตราค่าจ้างต่อชั่วโมงที่แนะนำสำหรับ Fullstack Developer:
+อัตราค่าจ้างต่อชั่วโมงที่แนะนำสำหรับ Fullstack Developer สำหรับเงินเดือน {monthly_salary:,} บาท:
 - อัตราพื้นฐาน: {rates['hourly']['base']:,} บาท/ชั่วโมง
 - อัตราขั้นต่ำ: {rates['hourly']['minimum']:,} บาท/ชั่วโมง
 - อัตราที่แนะนำ: {rates['hourly']['recommended']:,} บาท/ชั่วโมง
